@@ -1,0 +1,14 @@
+/* BackgroundVideo.css */
+
+/* Style to cover the entire screen */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind other content */
+  }
+  
+  /* Optionally, add styles to your other content */
+  

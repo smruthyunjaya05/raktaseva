@@ -1,0 +1,466 @@
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  gap:8px;
+  color: white;
+  flex:1;
+}
+.background-video {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure it's rendered behind other content */
+}
+h1,h2,h3,h4,h5,h6,p {
+
+  margin:0;
+}
+li{
+  list-style-type: none;
+}
+.Header {
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with 0.8 opacity */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  color: white; /* Set text color to white for better visibility on the semi-transparent background */
+}
+
+.Header h2 {
+  color:red;
+  cursor: pointer;
+}
+.container {
+  display:flex;
+  flex-direction: column;
+  height:calc(100vh - 66.4px - 34.4px - 16px);
+  flex:1;
+}
+.Footer{
+  background-color:rgb(76, 3, 3);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
+}
+menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+menu li{
+  font-weight: bold;
+  opacity: 0.5;
+  cursor: pointer;
+}
+menu li:hover,menu li.active{
+  opacity: 1;
+  color: red;
+}
+menu li {
+  
+  opacity: 0.5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: black;
+  transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in-out;
+  
+}
+
+.menu li:hover,
+.menu li.active {
+  opacity: 1;
+  color: red;
+  
+}
+.menu li.active {
+  opacity: 1;
+  color: red;
+  text-decoration: underline; /* Underline effect on hover */
+  transform: scale(1.1); /* Scale up the size on hover */
+}
+menu li.active {
+  opacity: 1;
+  color: red;
+  text-decoration: underline; /* Red underline effect on hover */
+  transform: scale(1.2); 
+  
+}
+
+#home {
+  display:flex;
+  width:100%;
+  height:100%;
+  flex:1;
+  flex-direction: row;
+
+}
+.left {
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:16px;
+}
+.right {
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right img {
+  height:100%;
+}
+.left h3 {
+  font-size: xx-large;
+}
+.left h3 span {
+  color:red;
+}
+.left p {
+  font-size: larger;
+}
+#about {
+  display:flex;
+  flex-direction: column;
+  gap:32px;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width:100%;
+  color: white;
+}
+#about h3 {
+  font-size: x-large;
+  color:red;
+}
+#about h4 {
+  font-size: x-large;
+  color:red;}
+#about p {
+  max-width: 1000px;
+  font-size: large;
+}
+#services {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.service {
+  max-width: 320px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 30px;
+  border: 2px dotted white;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for smooth effect */
+  flex: 1; /* Distribute available space evenly among items */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: white; /* Set text color to white for better visibility on black background */
+}
+
+
+.service:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red light shadow on hover */
+  transform: scale(1.1); /* Scale up the size on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+.service h3 {
+  font-size: x-large;
+  color:red;
+}
+.service p {
+  font-size: large;
+}
+#pricing {
+  display:flex;
+  flex-direction: column;
+  gap:64px;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width:100%;
+  color: white;
+}
+#pricing h3 {
+  color:red;
+  font-size: x-large;
+}
+th{
+  color: red;
+}
+th,td {
+  padding:8px 16px;
+  text-align: left;
+}
+th {
+  font-size: x-large;
+}
+td {
+  font-size: large;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: red;
+  width: 100%;
+}
+
+#contact h3 {
+  font-size: large; /* Adjusted the font size */
+  color: red;
+}
+
+#fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduced the gap */
+  background: white;
+  padding: 8px; /* Reduced the padding */
+  border-radius: 8px;
+}
+
+.inp-grp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inp-grp input {
+  width: 280px; /* Reduced the width */
+  padding: 12px; /* Reduced the padding */
+  border-radius: 8px;
+  background: #efefef;
+  outline-color: red;
+  border: none;
+}
+
+.inp-grp button {
+  width: 300px; /* Reduced the width */
+  padding: 12px; /* Reduced the padding */
+  border-radius: 8px;
+  border: none;
+  background: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inp-grp button:hover {
+  background: black;
+}
+
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+#contact:hover {
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transform: scale(1.2); /* Scale up the size on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+#login h2 {
+  color: red;
+}
+
+#fields {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: red;
+  background: red;  
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 10px 0;
+  font-weight: bold;
+  color: red;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  outline-color: red;
+}
+
+button {
+  width: 320px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+
+#sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; /* Reduced margin top */
+}
+
+#sign h2 {
+  color: red;
+}
+
+#fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduced the gap */
+  background: white;
+  padding: 8px; /* Reduced the padding */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Reduced box shadow */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 3px 0;
+  font-weight: bold;
+  color: red;
+}
+
+input {
+  width: 280px; /* Reduced width */
+  padding: 8px; /* Reduced padding */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px; /* Reduced margin */
+  outline-color: red;
+}
+
+button {
+  width: 280px; /* Reduced width */
+  padding: 8px; /* Reduced padding */
+  border-radius: 8px;
+  border: none;
+  background: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+
+#forms {
+  max-width: 400px; /* Set your desired maximum width */
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(148, 6, 6, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
+}
+#forms h2{
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 3px;
+}
+
+input,
+select,
+textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid red;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+checkbox {
+  margin-right: 6px;
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: black;
+}
+/* BackgroundVideo.css */
+
+/* Style to cover the entire screen */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the video behind other content */
+}
+
+/* Optionally, add styles to your other content */
