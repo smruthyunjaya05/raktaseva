@@ -9,7 +9,7 @@ Rakth Seva is a platform designed to connect blood donors and recipients, raise 
 ## 🖥️ Live Demo
 
 <div align="center">
-  <img src="demo/demo1.png" alt="Home Page" width="80%"/>
+  <img src="demo/demo 1.png" alt="Home Page" width="80%"/>
   <br/><br/>
   <img src="demo/demo2.png" alt="About Page" width="80%"/>
   <br/><br/>
